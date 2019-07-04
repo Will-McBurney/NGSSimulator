@@ -1,0 +1,14 @@
+Argument examples:
+java Main all --runs the simulation with approach 100K samples for each division estimated and naive
+java Main [div] --runs the simulation with approach 100K samples for [div] using estimated technique
+java Main [div] naive --runs the simulation with approach 100K samples for [div] using naive technique
+java Main [div] [n] --runs the simulation with approach [n] samples for one [div] estimated technique
+java Main [div] [n] naive --runs the simulation with approach [n] samples for [div] using naive technique
+java Main [div] [n] [file] --runs the simulation with approach [n] samples for [div] using naive technique
+                             using [file] as the teamfile.
+                             
+[div] - Any division, "H", "A", "BE", "BW", "CE", "CW", "DW", "DE"
+[n] - Any positive number (the number of trials you want. Larger is more precise, but takes longer.
+[file] - The name of a correctly formatted teams file in the /data subfolder.
+all - Literally the string all
+naive - Literally the string naive
