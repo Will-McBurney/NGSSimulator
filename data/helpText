@@ -1,10 +1,10 @@
 Argument examples:
-java Main all --runs the simulation with approach 100K samples for each division estimated and naive
-java Main [div] --runs the simulation with approach 100K samples for [div] using estimated technique
-java Main [div] naive --runs the simulation with approach 100K samples for [div] using naive technique
-java Main [div] [n] --runs the simulation with approach [n] samples for one [div] estimated technique
-java Main [div] [n] naive --runs the simulation with approach [n] samples for [div] using naive technique
-java Main [div] [n] [file] --runs the simulation with approach [n] samples for [div] using naive technique
+"java -jar NGSSimulator all" --runs the simulation with approach 100K samples for each division estimated and naive
+"java -jar NGSSimulator [div]" --runs the simulation with approach 100K samples for [div] using estimated technique
+"java -jar NGSSimulator [div] naive" --runs the simulation with approach 100K samples for [div] using naive technique
+"java -jar NGSSimulator [div] [n]" --runs the simulation with approach [n] samples for one [div] estimated technique
+"java -jar NGSSimulator  Main [div] [n]" naive --runs the simulation with approach [n] samples for [div] using naive technique
+"java -jar NGSSimulator [div] [n] [file]" --runs the simulation with approach [n] samples for [div] using naive technique
                              using [file] as the teamfile.
                              
 [div] - Any division, "H", "A", "BE", "BW", "CE", "CW", "DW", "DE"

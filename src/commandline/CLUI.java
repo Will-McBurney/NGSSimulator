@@ -40,7 +40,7 @@ public class CLUI {
 		    int trials = Integer.parseInt(args[2]);
 			con.setTrials(trials);
 			con.setTeamFileName(args[3]);
-		} else {
+		} else if (args.length != 1) {
 			System.out.println("Illegal number of arguments. See documentation or \"help\"");
 		}
 		
