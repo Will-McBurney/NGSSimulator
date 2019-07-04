@@ -8,6 +8,8 @@ Allows you to simulate NGS divisions.
 
 ## How to Run:
 
+You must run in command line. There is no GUI...yet...
+
 Argument examples:
 "java -jar NGSSimulator all" --runs the simulation with approach 100K samples for each division estimated and naive using "data/teams.csv"  
 "java -jar NGSSimulator [div]" --runs the simulation with approach 100K samples for [div] using estimated technique  
