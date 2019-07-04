@@ -9,21 +9,22 @@ Allows you to simulate NGS divisions.
 ## How to Run:
 
 Argument examples:
-"java -jar NGSSimulator all" --runs the simulation with approach 100K samples for each division estimated and naive using "data/teams.csv"
-"java -jar NGSSimulator [div]" --runs the simulation with approach 100K samples for [div] using estimated technique
-"java -jar NGSSimulator [div] naive" --runs the simulation with approach 100K samples for [div] using naive technique
-"java -jar NGSSimulator [div] [n]" --runs the simulation with approach [n] samples for one [div] estimated technique
-"java -jar NGSSimulator [div] [n]" naive --runs the simulation with approach [n] samples for [div] using naive technique
-"java -jar NGSSimulator [div] [n] [file]" --runs the simulation with approach [n] samples for [div] using naive technique
-                             using [file] as the teamfile.
+"java -jar NGSSimulator all" --runs the simulation with approach 100K samples for each division estimated and naive using "data/teams.csv"  
+"java -jar NGSSimulator [div]" --runs the simulation with approach 100K samples for [div] using estimated technique  
+"java -jar NGSSimulator [div] naive" --runs the simulation with approach 100K samples for [div] using naive technique  
+"java -jar NGSSimulator [div] [n]" --runs the simulation with approach [n] samples for one [div] estimated technique  
+"java -jar NGSSimulator [div] [n]" naive --runs the simulation with approach [n] samples for [div] using naive technique  
+"java -jar NGSSimulator [div] [n] [file]" --runs the simulation with approach [n] samples for [div] using naive technique  
+                             using [file] as the teamfile.  
                              
-[div] - Any division, "H", "A", "BE", "BW", "CE", "CW", "DW", "DE"
-[n] - Any positive number (the number of trials you want. Larger is more precise, but takes longer.
-[file] - The name of a correctly formatted teams file in the /data subfolder.
-all - Literally the string all
-naive - Literally the string naive
+[div] - Any division, "H", "A", "BE", "BW", "CE", "CW", "DW", "DE"  
+[n] - Any positive number (the number of trials you want. Larger is more precise, but takes longer.  
+[file] - The name of a correctly formatted teams file in the /data subfolder.  
+all - Literally the string all  
+naive - Literally the string naive  
 
-##Naive vs. Estimated
+## Naive vs. Estimated
+
 "All Models are Wrong, Some are Useful"
 
 From NGS Admins, I got the initial MMRS for each team. I adjusted these to form Elo ratings with the mean around 1500 across all divisions. By
@@ -42,21 +43,21 @@ Simply download the repository and run the Jar file in the NGS Simulator Directo
 ## Data Folder
 This folder contains the teams.csv file and the schedules.
 
-###Teams.csv
+### Teams.csv
 
 This file MUST be in the data folder. The default teamfile is "teams.csv", which includes DBSmiley's original estimations of NGS teams. 
 
 If you wish to altar these adjustments, either edit the teams.csv file, or save a new copy with a different name, modify that, and use the 
 last command line option above.
 
-###Schedule files
+### Schedule files
 
 All schedule starting CSV files can be found here: https://docs.google.com/spreadsheets/d/1fIQ0mtCZi0d7qtc1FGJ2uZ5dMYS8i9Eq1rzneE7Nhb4/edit?usp=sharing
 
 DBSmiley will keep these sheets up to date. You can redownload them here using File -> Download As -> Csv (current sheet). By default, the schedule
 downloads as something like "Schedules - H". Do not change the name. Simply copy and paste that file to the data/schedules/ folder and overwrite the previous schedule.
 
-###Caveats
+## Caveats
 
 This program does NOT simulate a team's KDA (I don't even begin to know how to do that), as such it doesn't take KDA tiebreaker into account (it does
 however take head-to-head tiebreaker's into account). As such, it may say a team has a small chance of making the playoff.
@@ -69,6 +70,6 @@ The Elo ratings for each team are probably bad. Especially if you don't upload y
 be the whole story, and I don't have time to watch every single team play enough to form subjective nuanced opinions of their quality. If you
 don't like my Elo ratings, use Naive
 
-###Coming Features
+## Coming Features
 1) List all teams by Elo Rating
 2) UI? Maybe? Should be easy enough since I used 3 tier architecture, but I also suck at UI design so....*shrug*
