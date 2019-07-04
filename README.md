@@ -50,6 +50,10 @@ This file MUST be in the data folder. The default teamfile is "teams.csv", which
 If you wish to altar these adjustments, either edit the teams.csv file, or save a new copy with a different name, modify that, and use the 
 last command line option above.
 
+Starting Elo ratings are here: https://drive.google.com/file/d/1x0BYwmI6Ay_xO69dxt51U4q0SwVfARIE/view?usp=sharing
+
+I highlighted teams in red that I fear are outliers. If I make changes, you'll see them on this page and I will update the teams.csv file on the repo.
+
 ### Schedule files
 
 All schedule starting CSV files can be found here: https://docs.google.com/spreadsheets/d/1fIQ0mtCZi0d7qtc1FGJ2uZ5dMYS8i9Eq1rzneE7Nhb4/edit?usp=sharing
