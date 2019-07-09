@@ -102,30 +102,34 @@ public class NGSTeam implements Team {
 	public void recordMatchResult(Team other, int myMapScore, int otherMapScore) {
 		NGSTeam o = (NGSTeam) other;
 		if (myMapScore == 2 && otherMapScore == 0) { //domination
-			//count as 2 map wins due to domination
-			this.elo += 2 * EloLibrary.getEloDelta(this, other, true);
-			o.elo += 2 * EloLibrary.getEloDelta(other, this, false);
+			//count as 2.5 map wins due to domination
+			this.elo += 2.5 * EloLibrary.getEloDelta(this, other, true);
+			o.elo += 2.5 * EloLibrary.getEloDelta(other, this, false);
 			//add to respective results sets
 			this.results.get(3).add(o);
 			o.results.get(0).add(this);
 		} else if (myMapScore == 2 && otherMapScore == 1) { //close win
-			//count as 1 map win 
-			this.elo += EloLibrary.getEloDelta(this, other, true);
-			o.elo += EloLibrary.getEloDelta(other, this, false);
+			//count as 2 map wins and 1 map loss
+			this.elo += 2 * EloLibrary.getEloDelta(this, other, true);
+			o.elo += 2 * EloLibrary.getEloDelta(other, this, false);
+			this.elo += EloLibrary.getEloDelta(this, other, false);
+			o.elo += EloLibrary.getEloDelta(other, this, true);
 			//add to respective results sets
 			this.results.get(2).add(o);
 			o.results.get(1).add(this);
 		} else if (myMapScore == 1 && otherMapScore == 2) { //close loss
-			//count as 1 map loss
-			this.elo += EloLibrary.getEloDelta(this, other, false);
-			o.elo += EloLibrary.getEloDelta(other, this, true);
+			//count as 2 map losses and 1 map win
+			this.elo += 2 * EloLibrary.getEloDelta(this, other, false);
+			o.elo += 2 * EloLibrary.getEloDelta(other, this, true);
+			this.elo += EloLibrary.getEloDelta(this, other, true);
+			o.elo += EloLibrary.getEloDelta(other, this, false);
 			//add to respective results sets
 			this.results.get(1).add(o);
 			o.results.get(2).add(this);
 		} else if (myMapScore == 0 && otherMapScore == 2) { //pooped on
 			//count as 2 map wins due to domination
-		    this.elo += EloLibrary.getEloDelta(this, other, false);
-			o.elo += EloLibrary.getEloDelta(other, this, true);
+		    this.elo += 2.5 * EloLibrary.getEloDelta(this, other, false);
+			o.elo += 2.5 * EloLibrary.getEloDelta(other, this, true);
 			//add to respective results sets
 			this.results.get(0).add(o);
 			o.results.get(3).add(this);
