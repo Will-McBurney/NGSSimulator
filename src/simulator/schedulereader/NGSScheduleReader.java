@@ -79,12 +79,13 @@ public class NGSScheduleReader {
 	 * @return
 	 */
 	private NGSMatch getNGSMatchFromLine(String line, HashMap<String,NGSTeam> teams) {
-		String[] lineSplit = line.split(",", 4);
+		String[] lineSplit = line.split(",", 5);
 		if (lineSplit[2].length()==0) { //unresolved game
 			return new NGSMatch(teams.get(lineSplit[0]), teams.get(lineSplit[1]));
 		} else { //resolved game
+			boolean isForfeit = lineSplit[5].equals("1");
 			teams.get(lineSplit[0]).recordMatchResult(teams.get(lineSplit[1]), 
-					Integer.parseInt(lineSplit[2]), Integer.parseInt(lineSplit[3]));
+					Integer.parseInt(lineSplit[2]), Integer.parseInt(lineSplit[3]), isForfeit);
 			return new NGSMatch(teams.get(lineSplit[0]), teams.get(lineSplit[1]),
 					Integer.parseInt(lineSplit[2]), Integer.parseInt(lineSplit[3]));
 		}

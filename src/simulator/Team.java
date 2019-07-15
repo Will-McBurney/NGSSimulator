@@ -72,7 +72,7 @@ public interface Team extends Comparable<Team>{
 	 * @param myMapScore - the calling team's map score
 	 * @param otherMapScore - the opponent map score
 	 */
-	public void recordMatchResult(Team other, int myMapScore, int otherMapScore);
+	public void recordMatchResult(Team other, int myMapScore, int otherMapScore, boolean isForfeit);
 	
 	/**
 	 * Similar to recordMatchResult, but as this is a simulated result, Elo is NOT updated, only match records

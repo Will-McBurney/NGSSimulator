@@ -6,6 +6,7 @@ public class NGSMatch implements Match{
 	private boolean resolved;
 	private NGSTeam home, away;
 	private int homeScore, awayScore;
+	private boolean forfeit;
 	
 	/**
 	 * Constructor for unplayed match
@@ -16,6 +17,7 @@ public class NGSMatch implements Match{
 		this.home = home;
 		this.away = away;
 		resolved = false;
+		forfeit = false;
 	}
 	
 	/**
@@ -31,6 +33,23 @@ public class NGSMatch implements Match{
 		this.homeScore = homeScore;
 		this.awayScore = awayScore;
 		resolved = true;
+		forfeit = false;
+	}	
+	
+	/**
+	 * Constructor for played match with forfeit
+	 * @param home
+	 * @param away
+	 * @param homeScore
+	 * @param awayScore
+	 */
+	public NGSMatch (NGSTeam home, NGSTeam away, int homeScore, int awayScore, boolean forfeit) {
+		this.home = home;
+		this.away = away;
+		this.homeScore = homeScore;
+		this.awayScore = awayScore;
+		resolved = true;
+		this.forfeit = forfeit;
 	}	
 	
 
@@ -82,6 +101,11 @@ public class NGSMatch implements Match{
 	@Override
 	public int getAwayScore() {
 		return awayScore;
+	}
+	
+	
+	public boolean isForfeit() {
+		return forfeit;
 	}
 	
 	@Override

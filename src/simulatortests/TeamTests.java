@@ -17,10 +17,10 @@ public class TeamTests {
 		
 		Team f = new NGSTeam("Quitter Dick Weasels", "QDW", 500); //forfeits the match against t
 		
-		t.recordMatchResult(g, 0, 2); //g dominates t
-		b.recordMatchResult(t, 0, 2); //t dominates b
-		t.recordMatchResult(a, 2, 1); //g narrow wins over t
-		f.recordMatchResult(t, 0, 0); //no contest
+		t.recordMatchResult(g, 0, 2, false); //g dominates t
+		b.recordMatchResult(t, 0, 2, false); //t dominates b
+		t.recordMatchResult(a, 2, 1, false); //g narrow wins over t
+		f.recordMatchResult(t, 0, 0, false); //no contest
 		
 		System.out.println(t.toStringDetailed());
 		System.out.println(g.toStringDetailed());
