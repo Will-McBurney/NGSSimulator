@@ -111,7 +111,11 @@ public class NGSMatch implements Match{
 	@Override
 	public String toString() {
 		if (resolved) {
-			return home.getAbbreviation() + " - " + homeScore + " : " + away.getAbbreviation() + " - " + awayScore;
+			if (isForfeit()) {
+				return home.getAbbreviation() + " - " + homeScore + " : " + away.getAbbreviation() + " - " + awayScore + " - FORFEIT";
+			} else {
+				return home.getAbbreviation() + " - " + homeScore + " : " + away.getAbbreviation() + " - " + awayScore;
+			}
 		} else {
 			return home.getAbbreviation() + " : " + away.getAbbreviation() + " UNPLAYED ";
 		}

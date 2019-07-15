@@ -87,7 +87,7 @@ public class NGSScheduleReader {
 			teams.get(lineSplit[0]).recordMatchResult(teams.get(lineSplit[1]), 
 					Integer.parseInt(lineSplit[2]), Integer.parseInt(lineSplit[3]), isForfeit);
 			return new NGSMatch(teams.get(lineSplit[0]), teams.get(lineSplit[1]),
-					Integer.parseInt(lineSplit[2]), Integer.parseInt(lineSplit[3]));
+					Integer.parseInt(lineSplit[2]), Integer.parseInt(lineSplit[3]), isForfeit);
 		}
 	}
 }
