@@ -7,7 +7,7 @@ package simulator.utils;
 import simulator.Team;
 
 public class EloLibrary {
-	public static final int K = 40;
+	public static final int K = 30;
 	
 	/**
 	 * Gets win probability of home team against away team. This probability is (0.0, 1.0)
