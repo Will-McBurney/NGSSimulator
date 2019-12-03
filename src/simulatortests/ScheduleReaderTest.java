@@ -12,7 +12,7 @@ public class ScheduleReaderTest {
 		NGSTeamReader tr = new EstimatedNGSTeamReader("teams.csv");
 		List<NGSTeam> teams = tr.getTeamsForDivision("H");
 		NGSScheduleReader reader = new NGSScheduleReader();
-		System.out.println(reader.getDivisionSchedule(teams, "H"));
+		System.out.println(reader.getDivisionSchedule(teams, "H", false));
 		
 		
 	}

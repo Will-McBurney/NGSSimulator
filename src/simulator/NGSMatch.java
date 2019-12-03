@@ -7,6 +7,7 @@ public class NGSMatch implements Match{
 	private NGSTeam home, away;
 	private int homeScore, awayScore;
 	private boolean forfeit;
+	private boolean fiftyFifty;
 	
 	/**
 	 * Constructor for unplayed match
@@ -18,6 +19,15 @@ public class NGSMatch implements Match{
 		this.away = away;
 		resolved = false;
 		forfeit = false;
+		fiftyFifty = false;
+	}
+	
+	public NGSMatch(NGSTeam home, NGSTeam away, boolean fiftyFifty) {
+		this.home = home;
+		this.away = away;
+		resolved = false;
+		forfeit = false;
+		this.fiftyFifty = fiftyFifty;
 	}
 	
 	/**
@@ -69,6 +79,9 @@ public class NGSMatch implements Match{
 		if (!resolved) {
 			//odds the home team wins
 			double r = EloLibrary.getHomeWinProbability(home, away);
+			if (fiftyFifty) {
+				r = 0.5;
+			}
 			//Best of 3 simulation
 			while (homeScore < 2 && awayScore < 2) {
 				if(Math.random() < r) {

@@ -15,6 +15,7 @@ public class NGSController {
 	private boolean isNaive;
 	private int trials;
 	private String teamFileName;
+	private boolean fiftyFifty;
 	
 	public NGSController() {
 		isNaive = false;
@@ -45,12 +46,15 @@ public class NGSController {
 	}
 	
 	public List<NGSTeamSimulationResult> getDivisionPrediction(String divisionName) {
-		String naive = isNaive?"Naive":"Estimated"; 
+		String naive = "Fifty/Fifty";
+		if (!this.fiftyFifty) {
+			naive = isNaive?"Naive":"Estimated"; 
+		}
 		System.out.println("Division : " + divisionName + " -- " + naive); //header
-		NGSDivision ngsd = new NGSDivision(teamFileName, divisionName, isNaive);
+		NGSDivision ngsd = new NGSDivision(teamFileName, divisionName, isNaive, fiftyFifty);
 		NGSSimulationAccumulator acc = new NGSSimulationAccumulator(ngsd.getNGSTeams(), trials);
 		for (int i = 0; i < trials; i++) {
-			ngsd = new NGSDivision("teams.csv", divisionName, isNaive);
+			ngsd = new NGSDivision("teams.csv", divisionName, isNaive, fiftyFifty);
 			ngsd.simulate();			
 			acc.addSimulation(ngsd.getPlayoffSeeding());
 		}
@@ -62,7 +66,7 @@ public class NGSController {
 		String[] divisions = {"H", "A", "BE", "BW", "CE", "CW", "DE", "DW"};
 		NGSTeamReader tr = isNaive ?  new NaiveNGSTeamReader(teamFileName) : new EstimatedNGSTeamReader(teamFileName);
 		for (String division : divisions) {
-			NGSDivision ngsd = new NGSDivision(teamFileName, division, isNaive);
+			NGSDivision ngsd = new NGSDivision(teamFileName, division, isNaive, fiftyFifty);
 			List<NGSTeam> teams = ngsd.getNGSTeams();
 			for (NGSTeam t : teams) {
 				eloMap.put(t, t.getElo());
@@ -70,6 +74,10 @@ public class NGSController {
 		}
 		return eloMap;
 		
+	}
+
+	public void setFifty(boolean b) {
+		fiftyFifty = b;
 	}
 	
 	

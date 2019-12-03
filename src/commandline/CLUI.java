@@ -28,9 +28,14 @@ public class CLUI {
 				if (args[2].equalsIgnoreCase("naive")) {
 					con.setNaive(true);
 				}
+				if (args[2].equalsIgnoreCase("fifty")) {
+					con.setFifty(true);
+				}
 				con.getAllEloScores();
 			} else if (args[1].equalsIgnoreCase("naive")) {
 				con.setNaive(true);
+			} else if (args[1].equalsIgnoreCase("fifty")) {
+				con.setFifty(true);
 			} else {
 				int trials = Integer.parseInt(args[1]);
 				con.setTrials(trials);
@@ -39,11 +44,17 @@ public class CLUI {
 			if (args[1].equalsIgnoreCase("naive")) {
 				con.setNaive(true);
 			}
+			if (args[1].equalsIgnoreCase("fifty")) {
+				con.setFifty(true);
+			}
 		    int trials = Integer.parseInt(args[2]);
 			con.setTrials(trials);
 
 		} else if (args.length == 4) {
 			if (args[1].equalsIgnoreCase("naive")) {
+				con.setNaive(true);
+			}
+			if (args[1].equalsIgnoreCase("fifty")) {
 				con.setNaive(true);
 			}
 		    int trials = Integer.parseInt(args[2]);
@@ -78,6 +89,7 @@ public class CLUI {
 				boolean[] naiveValues = {true, false};
 				for (String div : divisions) {
 					for (boolean naive : naiveValues) {
+						con.setFifty(false);
 						con.setNaive(naive);
 						List<NGSTeamSimulationResult> results = con.getDivisionPrediction(div);
 						StringBuilder sb = new StringBuilder();
@@ -87,6 +99,15 @@ public class CLUI {
 						}
 						System.out.println(sb.toString());
 					}
+					con.setNaive(false);
+					con.setFifty(true);
+					List<NGSTeamSimulationResult> results = con.getDivisionPrediction(div);
+					StringBuilder sb = new StringBuilder();
+					sb.append("Team\t1\t2\t3\t4\t5\t6\t7\t8\tPlayoff Chance\n");
+					for (NGSTeamSimulationResult r : results) {
+						sb.append(r.toString(con.getTrials()));
+					}
+					System.out.println(sb.toString());
 				}
 			} else if (args[0].equals("elo")) { //not ready yet - currently gives starting elo, not current
 				HashMap<NGSTeam, Double> eloMap = con.getAllEloScores();

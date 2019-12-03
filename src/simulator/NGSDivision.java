@@ -28,14 +28,14 @@ public class NGSDivision implements Division{
 	 * @param isNaive - True: we are making a naive assumption about each team's Elo in the division
 	 *                  False: we are going to use the estimated Elo based on performance pre-dating NGS Season 7
 	 */
-	public NGSDivision(String teamFilename, String divisionName, boolean isNaive) {
+	public NGSDivision(String teamFilename, String divisionName, boolean isNaive, boolean fiftyFifty) {
 		name = divisionName;
 		simulated = false;
 		NGSTeamReaderFactory trf = new NGSTeamReaderFactory();
 		NGSTeamReader tr = trf.getNGSTeamReader(teamFilename, isNaive);
 		teams = tr.getTeamsForDivision(divisionName);
 		NGSScheduleReader sr = new NGSScheduleReader();
-		schedule = sr.getDivisionSchedule(teams, divisionName);
+		schedule = sr.getDivisionSchedule(teams, divisionName, fiftyFifty);
 		
 	}
 	

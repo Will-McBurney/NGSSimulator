@@ -20,7 +20,7 @@ import simulator.NGSMatch;
 import simulator.NGSTeam;
 
 public class NGSScheduleReader {
-	public NGSDivisionSchedule getDivisionSchedule(List<NGSTeam> teams, String divisionName) {
+	public NGSDivisionSchedule getDivisionSchedule(List<NGSTeam> teams, String divisionName, boolean fiftyFifty) {
 		HashMap<String, NGSTeam> teamMap = getTeamMapFromList(teams);
 		ArrayList<NGSMatch> matches = new ArrayList<NGSMatch>();
 		try {
@@ -30,7 +30,7 @@ public class NGSScheduleReader {
 			String line;
 			while ((line = br.readLine()) != null) {
 				if (!line.startsWith("#") && line.length() >= 2) {
-					matches.add(getNGSMatchFromLine(line, teamMap));
+					matches.add(getNGSMatchFromLine(line, teamMap, fiftyFifty));
 				}
 			}
 			
@@ -76,11 +76,15 @@ public class NGSScheduleReader {
 	 * Extract a Match object from a line in the csv file
 	 * @param line
 	 * @param teams
+	 * @param fiftyFifty 
 	 * @return
 	 */
-	private NGSMatch getNGSMatchFromLine(String line, HashMap<String,NGSTeam> teams) {
+	private NGSMatch getNGSMatchFromLine(String line, HashMap<String,NGSTeam> teams, boolean fiftyFifty) {
 		String[] lineSplit = line.split(",", 5);
 		if (lineSplit[2].length()==0) { //unresolved game
+			if (fiftyFifty) {
+				return new NGSMatch(teams.get(lineSplit[0]), teams.get(lineSplit[1]), true);
+			}
 			return new NGSMatch(teams.get(lineSplit[0]), teams.get(lineSplit[1]));
 		} else { //resolved game
 			boolean isForfeit = lineSplit[4].equals("1");
