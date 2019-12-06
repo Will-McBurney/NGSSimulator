@@ -1,10 +1,11 @@
 Home,Away,Score Home,Score Away,Forfeit,Date
 #WEEK 1,,,,,
-TCM,ARRN,,,,
-DTT,CCS,,,,
-VFM,PM,,,,
+PM,ARRN,2,1,0,12/04/2019
+TCM,ARRN,0,2,0,12/04/2019
+DTT,CCS,2,0,0,12/04/2019
+VFM,PM,0,2,0,12/05/2019
+TRSG,CM,0,2,0,12/05/2019
 BTB,WTT,,,,
-TRSG,CM,,,,
 #WEEK 2,,,,,
 FMJ,CCS,,,,
 DTT,ARRN,,,,
@@ -57,7 +58,6 @@ FMJ,TCM,,,,
 TCM,DTT,,,,
 BTB,CCS,,,,
 WTT,CM,,,,
-PM,ARRN,,,,
 FMJ,TRSG,,,,
 #WEEK 11,,,,,
 TCM,CCS,,,,

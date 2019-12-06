@@ -1,11 +1,12 @@
 Home,Away,Score Home,Score Away,Forfeit,Date
 #WEEK 1,,,,,
-DURC,CTHD,,,,
+2C2T,DFR,2,1,0,12/04/2019
+LUBU,RGA,0,2,0,12/04/2019
+DFV,IQ,2,0,0,12/05/2019
+DURC,CTHD,0,2,0,12/05/2019
+DFR,RGA,0,2,0,12/06/2019
 CT,HOC,,,,
-2C2T,DFR,,,,
-LUBU,RGA,,,,
 WOOD,CLAP,,,,
-DFV,IQ,,,,
 #WEEK 2,,,,,
 HOC,CTHD,,,,
 DURC,CLAP,,,,
@@ -15,7 +16,6 @@ CT,DFR,,,,
 LUBU,IQ,,,,
 #WEEK 3,,,,,
 CT,CTHD,,,,
-DFR,RGA,,,,
 HOC,CLAP,,,,
 2C2T,IQ,,,,
 DURC,DFV,,,,
