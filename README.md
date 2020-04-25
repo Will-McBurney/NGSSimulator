@@ -17,7 +17,7 @@ Argument examples:
 "java -jar NGSSimulator [div] [n]" --runs the simulation with approach [n] samples for one [div] estimated technique  
 "java -jar NGSSimulator [div] [n]" naive --runs the simulation with approach [n] samples for [div] using naive technique  
 "java -jar NGSSimulator [div] [n] [file]" --runs the simulation with approach [n] samples for [div] using naive technique  
-                             using [file] as the teamfile. 
+                             using [file] as the teamfile.  
 "java -jar NGSSimulator elo" --lists all teams by their current elo in descending order
                              
 [div] - Any division, "H", "A", "BE", "BW", "CE", "CW", "DW", "DE"  
