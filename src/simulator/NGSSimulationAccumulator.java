@@ -16,14 +16,18 @@ public class NGSSimulationAccumulator {
 	
 	public NGSSimulationAccumulator(List<NGSTeam> teams, int totalRuns) {
 		results = new HashMap<String, NGSTeamSimulationResult>();
+		int seedsNumber = 8;
+		if (teams.size() < 8) {
+			seedsNumber = 4;
+		}
 		this.totalRuns = totalRuns;
 		for (NGSTeam t : teams) {
-			results.put(t.getAbbreviation(), new NGSTeamSimulationResult(t.getAbbreviation()));
+			results.put(t.getAbbreviation(), new NGSTeamSimulationResult(t.getAbbreviation(), seedsNumber));
 		}
 	}
 	
 	public void addSimulation(NGSPlayoffSeeding seeding) {
-		for (int position = 0; position < NGSPlayoffSeeding.PLAYOFF_SIZE; position++) {
+		for (int position = 0; position < seeding.PLAYOFF_SIZE; position++) {
 			String abbrv = seeding.getSeeding().get(position).getAbbreviation();
 			if (!results.containsKey(abbrv)) {
 				throw new RuntimeException("DATA ERROR: unknown abbrv: " + abbrv);

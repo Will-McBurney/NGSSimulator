@@ -85,15 +85,20 @@ public class CLUI {
 				}
 				
 			} else if (args[0].equalsIgnoreCase("all")) {
-				String[] divisions = {"H","A","BE","BW","CE","CW","DE","DW"};
+				String[] divisions = {"H","AE","AW","BE","BW","CE","CW","DE","DW","E"};
 				boolean[] naiveValues = {true, false};
 				for (String div : divisions) {
 					for (boolean naive : naiveValues) {
 						con.setFifty(false);
 						con.setNaive(naive);
 						List<NGSTeamSimulationResult> results = con.getDivisionPrediction(div);
+						
 						StringBuilder sb = new StringBuilder();
-						sb.append("Team\t1\t2\t3\t4\t5\t6\t7\t8\tPlayoff Chance\n");
+						if (results.get(0).getCountsSize() < 8) {
+							sb.append("Team\t1\t2\t3\t4\tPlayoff Chance\n");
+						} else {
+							sb.append("Team\t1\t2\t3\t4\t5\t6\t7\t8\tPlayoff Chance\n");
+						}
 						for (NGSTeamSimulationResult r : results) {
 							sb.append(r.toString(con.getTrials()));
 						}
@@ -103,7 +108,12 @@ public class CLUI {
 					con.setFifty(true);
 					List<NGSTeamSimulationResult> results = con.getDivisionPrediction(div);
 					StringBuilder sb = new StringBuilder();
-					sb.append("Team\t1\t2\t3\t4\t5\t6\t7\t8\tPlayoff Chance\n");
+					
+					if (results.get(0).getCountsSize() < 8) {
+						sb.append("Team\t1\t2\t3\t4\tPlayoff Chance\n");
+					} else {
+						sb.append("Team\t1\t2\t3\t4\t5\t6\t7\t8\tPlayoff Chance\n");
+					}
 					for (NGSTeamSimulationResult r : results) {
 						sb.append(r.toString(con.getTrials()));
 					}
@@ -137,7 +147,11 @@ public class CLUI {
 			} else {
 				List<NGSTeamSimulationResult> results = con.getDivisionPrediction(args[0]);
 				StringBuilder sb = new StringBuilder();
-				sb.append("Team\t1\t2\t3\t4\t5\t6\t7\t8\tPlayoff Chance\n");
+				if (results.get(0).getCountsSize() < 8) {
+					sb.append("Team\t1\t2\t3\t4\tPlayoff Chance\n");
+				} else {
+					sb.append("Team\t1\t2\t3\t4\t5\t6\t7\t8\tPlayoff Chance\n");
+				}
 				for (NGSTeamSimulationResult r : results) {
 					sb.append(r.toString(con.getTrials()));
 				}

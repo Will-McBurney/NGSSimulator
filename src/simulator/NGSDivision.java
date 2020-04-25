@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import simulator.schedulereader.NGSCSVScheduleReader;
+import simulator.schedulereader.NGSExcelScheduleReader;
 import simulator.schedulereader.NGSScheduleReader;
 import simulator.teamreader.NGSTeamReader;
 import simulator.teamreader.NGSTeamReaderFactory;
@@ -34,7 +36,7 @@ public class NGSDivision implements Division{
 		NGSTeamReaderFactory trf = new NGSTeamReaderFactory();
 		NGSTeamReader tr = trf.getNGSTeamReader(teamFilename, isNaive);
 		teams = tr.getTeamsForDivision(divisionName);
-		NGSScheduleReader sr = new NGSScheduleReader();
+		NGSScheduleReader sr = new NGSExcelScheduleReader();
 		schedule = sr.getDivisionSchedule(teams, divisionName, fiftyFifty);
 		
 	}

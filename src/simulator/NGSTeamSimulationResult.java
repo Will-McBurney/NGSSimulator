@@ -21,10 +21,10 @@ public class NGSTeamSimulationResult implements Comparable<NGSTeamSimulationResu
 	 * Initialized counts arraylist to have as many 0 elements as there are playoff spots
 	 * @param abbrv - team abbreviation
 	 */
-	public NGSTeamSimulationResult(String abbrv) {
+	public NGSTeamSimulationResult(String abbrv, int numSeeds) {
 		this.abbrv = abbrv;
 		counts = new ArrayList<Integer>();
-		for (int i = 0; i < NGSPlayoffSeeding.PLAYOFF_SIZE; i++) {
+		for (int i = 0; i < numSeeds; i++) {
 			counts.add(0);
 		}
 	}
@@ -36,6 +36,10 @@ public class NGSTeamSimulationResult implements Comparable<NGSTeamSimulationResu
 	 */
 	public void addCount(int position) {
 		counts.set(position, counts.get(position) + 1);
+	}
+	
+	public int getCountsSize() {
+		return counts.size();
 	}
 
 	/**
@@ -66,7 +70,7 @@ public class NGSTeamSimulationResult implements Comparable<NGSTeamSimulationResu
 	 * and so on
 	 */
 	public int compareTo(NGSTeamSimulationResult o) {
-		for (int i = 0; i < NGSPlayoffSeeding.PLAYOFF_SIZE; i++) {
+		for (int i = 0; i < counts.size(); i++) {
 			if (this.counts.get(i) != o.counts.get(i)) {
 				return o.counts.get(i) - this.counts.get(i); //descending
 			}

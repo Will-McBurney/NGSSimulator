@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class NGSPlayoffSeeding {
-	public static final int PLAYOFF_SIZE = 8;
+	public int PLAYOFF_SIZE = 8;
 	
 	private ArrayList<NGSTeam> seeding;
 	
@@ -30,6 +30,11 @@ public class NGSPlayoffSeeding {
 	 */
 	@SuppressWarnings("unchecked")
 	public NGSPlayoffSeeding(List<NGSTeam> teams) {
+		//if there are fewer than 8 teams, then it's double round robin, meaning only 4 teams
+		//this isn't a permanent solution I hope
+		if (teams.size() < 8) {
+			PLAYOFF_SIZE = 4;
+		}
 		//sort the teams by their season score
 		Collections.sort(teams);
 		try {

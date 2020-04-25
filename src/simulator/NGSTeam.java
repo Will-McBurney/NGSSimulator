@@ -8,7 +8,7 @@ import simulator.utils.EloLibrary;
 public class NGSTeam implements Team {
 	private String name;
 	private String abbrv;
-	private ArrayList<HashSet<NGSTeam>> results; //NOTE: This assumes each team plays each other team in exactly 1 match
+	private ArrayList<ArrayList<NGSTeam>> results; //NOTE: This assumes each team plays each other team in exactly 1 match
 	private double elo;
 	private int forfeits;
 
@@ -16,9 +16,9 @@ public class NGSTeam implements Team {
 		this.name = name;
 		this.abbrv = abbrv;
 		this.elo = startingElo;
-		this.results = new ArrayList<HashSet<NGSTeam>>(4);
+		this.results = new ArrayList<ArrayList<NGSTeam>>(4);
 		for (int i = 0; i < 4; i++) {
-			results.add(new HashSet<NGSTeam>());
+			results.add(new ArrayList<NGSTeam>());
 		}
 	}
 	
@@ -80,7 +80,34 @@ public class NGSTeam implements Team {
 	 * @return True if this team has beaten (either domination or narrow) team o, false otherwise
 	 */
 	public boolean hasBeat(NGSTeam o) {
-		return results.get(3).contains(o) || results.get(2).contains(o);
+		int wins = 0, losses = 0;
+		for (NGSTeam t : results.get(0)) {
+			if (t.equals(o)) {
+				losses += 2;
+			}
+		}
+		
+		for (NGSTeam t : results.get(1)) {
+			if (t.equals(o)) {
+				losses += 2;
+				wins += 1;
+			}
+		}
+		
+		for (NGSTeam t : results.get(2)) {
+			if (t.equals(o)) {
+				losses += 1;
+				wins += 2;
+			}
+		}
+		
+		for (NGSTeam t : results.get(3)) {
+			if (t.equals(o)) {
+				wins += 2;
+			}
+		}
+		
+		return wins > losses;
 	}
 	
 	/**
