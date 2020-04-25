@@ -18,6 +18,7 @@ Argument examples:
 "java -jar NGSSimulator [div] [n]" naive --runs the simulation with approach [n] samples for [div] using naive technique  
 "java -jar NGSSimulator [div] [n] [file]" --runs the simulation with approach [n] samples for [div] using naive technique  
                              using [file] as the teamfile.  
+"java -jar NGSSimulator elo" --lists all teams by their current elo in descending order
                              
 [div] - Any division, "H", "A", "BE", "BW", "CE", "CW", "DW", "DE"  
 [n] - Any positive number (the number of trials you want. Larger is more precise, but takes longer.  
@@ -58,10 +59,10 @@ I highlighted teams in red that I fear are outliers. If I make changes, you'll s
 
 ### Schedule files
 
-All schedule starting CSV files can be found here: https://docs.google.com/spreadsheets/d/1fIQ0mtCZi0d7qtc1FGJ2uZ5dMYS8i9Eq1rzneE7Nhb4/edit?usp=sharing
+The schedule file is now a single XLSX File. It can be downloaded from here: https://docs.google.com/spreadsheets/d/1fIQ0mtCZi0d7qtc1FGJ2uZ5dMYS8i9Eq1rzneE7Nhb4/edit?usp=sharing
 
-DBSmiley will keep these sheets up to date. You can redownload them here using File -> Download As -> Csv (current sheet). By default, the schedule
-downloads as something like "Schedules - H". Do not change the name. Simply copy and paste that file to the data/schedules/ folder and overwrite the previous schedule.
+DBSmiley will keep these sheets up to date. You can redownload them here using File -> Download As -> XLSX. By default, the schedule
+downloads as "Schedules.xlsx". Do not change the name. Simply copy and paste that file to the data/schedules/ folder and overwrite the previous schedule.
 
 ## Caveats
 
@@ -77,5 +78,4 @@ be the whole story, and I don't have time to watch every single team play enough
 don't like my Elo ratings, use Naive
 
 ## Coming Features
-1) List all teams by Elo Rating
 2) UI? Maybe? Should be easy enough since I used 3 tier architecture, but I also suck at UI design so....*shrug*
