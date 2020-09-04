@@ -35,6 +35,9 @@ public class NGSPlayoffSeeding {
 		if (teams.size() < 8) {
 			PLAYOFF_SIZE = 4;
 		}
+		if (teams.size() == 8) {
+			PLAYOFF_SIZE = 6;
+		}
 		//sort the teams by their season score
 		Collections.sort(teams);
 		try {

@@ -20,6 +20,9 @@ public class NGSSimulationAccumulator {
 		if (teams.size() < 8) {
 			seedsNumber = 4;
 		}
+		if (teams.size() == 8) {
+			seedsNumber = 6;
+		}
 		this.totalRuns = totalRuns;
 		for (NGSTeam t : teams) {
 			results.put(t.getAbbreviation(), new NGSTeamSimulationResult(t.getAbbreviation(), seedsNumber));
