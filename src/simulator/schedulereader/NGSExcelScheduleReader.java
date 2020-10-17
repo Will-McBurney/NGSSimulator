@@ -77,7 +77,7 @@ public class NGSExcelScheduleReader extends NGSScheduleReader {
 	private List<NGSMatch> safeCopyMatches(HashMap<String, NGSTeam> teamMap, boolean fiftyFifty) {
 		List<NGSMatch> out = new ArrayList<NGSMatch>();
 		for (NGSMatch match : matches) {
-			System.out.println(match.getHomeTeam() + " : " + match.getAwayTeam());
+			//System.out.println(match.getHomeTeam() + " : " + match.getAwayTeam());
 			NGSTeam home = teamMap.get(match.getHomeTeam().getAbbreviation());
 			NGSTeam away = teamMap.get(match.getAwayTeam().getAbbreviation());
 			if (!match.isResolved()) {

@@ -85,8 +85,8 @@ public class CLUI {
 				}
 				
 			} else if (args[0].equalsIgnoreCase("all")) {
-				String[] divisions = {"S", "H", "AE", "AW", "BE1", "BE2", "BW", "CE", "CW", "DE", "DW", "E"};
-				boolean[] naiveValues = {true, false};
+				String[] divisions = {"H", "AE", "AW", "BE1", "BE2", "BW", "CE", "CW", "DE", "DW", "E"};
+				boolean[] naiveValues = {true};
 				for (String div : divisions) {
 					for (boolean naive : naiveValues) {
 						con.setFifty(false);
@@ -96,8 +96,6 @@ public class CLUI {
 						StringBuilder sb = new StringBuilder();
 						if (results.get(0).getCountsSize() < 8) {
 							sb.append("Team\t1\t2\t3\t4\tPlayoff Chance\n");
-						} else if (results.get(0).getCountsSize() == 8) {
-							sb.append("Team\t1\t2\t3\t4\t5\t6\tPlayoff Chance\n");
 						} else {
 							sb.append("Team\t1\t2\t3\t4\t5\t6\t7\t8\tPlayoff Chance\n");
 						}
@@ -113,8 +111,6 @@ public class CLUI {
 					
 					if (results.get(0).getCountsSize() < 8) {
 						sb.append("Team\t1\t2\t3\t4\tPlayoff Chance\n");
-					} else if (results.get(0).getCountsSize() == 8) {
-						sb.append("Team\t1\t2\t3\t4\t5\t6\tPlayoff Chance\n");
 					} else {
 						sb.append("Team\t1\t2\t3\t4\t5\t6\t7\t8\tPlayoff Chance\n");
 					}
@@ -153,8 +149,6 @@ public class CLUI {
 				StringBuilder sb = new StringBuilder();
 				if (results.get(0).getCountsSize() < 8) {
 					sb.append("Team\t1\t2\t3\t4\tPlayoff Chance\n");
-				} else if (results.get(0).getCountsSize() == 8) {
-					sb.append("Team\t1\t2\t3\t4\t5\t6\tPlayoff Chance\n");
 				} else {
 					sb.append("Team\t1\t2\t3\t4\t5\t6\t7\t8\tPlayoff Chance\n");
 				}
