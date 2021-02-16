@@ -1,128 +1,146 @@
-Team Name,ABBRV,Division,Estimated Initial Elo,Naive,dif
-Chilly Mountain,CHIL,S,3219.2,3185,34
-Team Exodia,EXOD,S,3204.8,3185,19
-ReGen,RG,S,3196.2,3185,11
-VGM Gaming,VGM,S,3192.6,3185,7
-CPogX Fanclub,CPOG,S,3185.1,3185,0
-The Other Koreans,TOK,S,3115.0,3185,-71
-Ceros Crypto Crew,CCC,H,3029.0,2971,58
-Brawl is Life,BIL,H,2996.8,2971,26
-Team Ripers,RIPE,H,2982.9,2971,12
-Richard and Richard and Ri,RICH,H,2972.9,2971,2
-New Game Plus,NG+,H,2970.9,2971,0
-Wildheart Gaming,WILD,H,2970.3,2971,-1
-Caffeinated Knights,CAFF,AE,2935.6,2896,39
-YameteKudasai,YAME,H,2966.5,2971,-4
-ReGen Retro,RGR,AW,2931.9,2908,24
-Forge the Winning Contidition,FTWC,AW,2927.4,2908,19
-Baby Makers,BABY,AW,2927.1,2908,19
-Party Time,PT,AE,2920.8,2896,24
-Double Paradox,PARA,H,2951.8,2971,-19
-Phoenix Rising Ruby,PRR,H,2950.8,2971,-20
-Fox and His Carries,FOX,AW,2915.3,2908,7
-ReGen Phoenix,RGP,AE,2913.3,2896,17
-Phoenix Rising Topaz,PRT,H,2946.6,2971,-24
-Sky5,SKY5,H,2940.0,2971,-31
-gillyShark,GLLY,AE,2902.4,2896,6
-Bronze6,B6,BW,2843.6,2794,50
-Wholesome Halfwits,WSHW,AE,2894.9,2896,-2
-Minion Miners,MM,AW,2893.8,2908,-15
-Boogan Squad,BOOG,BE1,2838.4,2790,48
-The Careless Badgers,BADG,AE,2889.8,2896,-7
-DeathWeb,DWEB,BE2,2832.9,2792,41
-Tricky Gooses,TG,AE,2886.6,2896,-10
-Team Happy Cloud,THC,AE,2886.2,2896,-10
-Roomba Rotations,ROOM,AE,2885.6,2896,-11
-Fancy Flightless Fowl,FOWL,AW,2884.3,2908,-24
-BeefBois,BEEF,AE,2881.8,2896,-15
-LEGAL,LGL,BE1,2824.1,2790,34
-Runnin Wild,WILD,AW,2878.3,2908,-30
-sOaK eVeRy LaNe,SEL,BW,2817.4,2794,24
-Better Than Bots,BTB,BW,2812.9,2794,19
-ProBUs,PBU,BE2,2810.9,2792,19
-Die Gaming,DIE,BE1,2809.4,2790,19
-Tiny Dancers,TINY,AE,2863.8,2896,-33
-Lurk Patrol,LURK,BW,2807.4,2794,14
-Beyond Gaming,BYND,BE2,2806.5,2792,14
-Phoenix Rising Diamond,PRD,BE2,2804.8,2792,12
-Scalding Sweat Cult,SSC,BE1,2803.3,2790,13
-The Win Train,WINT,BW,2802.9,2794,9
-ZZZ,ZZZ,BE2,2799.9,2792,8
-Phoenix Rising Citrine,PRC,CE,2765.5,2741,25
-Roll1Esports,R1E,BW,2799.4,2794,6
-House of Chez,CHEZ,CE,2761.2,2741,21
-Team Rainbow Strike Go!,TRSG,CW,2759.6,2745,14
-Blood Bath & Beyond,BB&B,CW,2759.0,2745,14
-Spooky Ghosts,SPKY,BW,2791.8,2794,-2
-Hololive Gaming Catgirls,HOLO,BE2,2791.5,2792,-1
-Amateur Opponents,AMAT,BE2,2789.0,2792,-3
-Garrulous Gaberlunzies,GG,CW,2753.3,2745,8
-Strange Team Comp,STC,BE1,2787.4,2790,-3
-Arrogant Nephalem,ARRN,BW,2786.5,2794,-7
-Can't Counterpick Stupid,STUP,CW,2751.3,2745,6
-ReGen Ghost,RGG,BE1,2779.9,2790,-10
-LuBu,LUBU,BE1,2777.5,2790,-12
-Protectors of Aiur,AIUR,CE,2741.1,2741,1
-Essence Gaming,ESSG,CW,2741.0,2745,-4
-COSMOS,CSMS,BW,2774.9,2794,-19
-Nexus Cats,NEXC,CE,2739.8,2741,-1
-Rise N' Grind,RISE,DE,2706.8,2695,12
-Randy Newman,RNDY,CW,2738.8,2745,-7
-Annie Oak League,AOL,CW,2738.1,2745,-7
-2Calculated2Throw,2C2T,BE2,2772.1,2792,-20
-Your Math Teachers,MATH,CE,2737.6,2741,-3
-Deckard's Erudition,DECK,BE1,2770.5,2790,-19
-Bad Matchmaker,BM,DE,2703.2,2695,8
-Death and Delay,D&D,BE1,2767.8,2790,-22
-Limit Break!,LMT,CE,2733.3,2741,-7
-ReGen Anomaly,RGA,BE2,2763.4,2792,-29
-Maple Syrup Bandits,MSB,CE,2727.5,2741,-13
-I Must Feed,IMF,DE,2694.3,2695,-1
-Clouded Minds,CM,DW,2691.7,2684,8
-Can't Create Acronyms,ACRO,CW,2722.0,2745,-23
-Phoenix Rising Emerald,PRE,BW,2754.9,2794,-39
-Ban Cho,BANC,BE2,2752.9,2792,-40
-Frank's Furters,FF,DE,2685.8,2695,-9
-Bunker Fun Time,BFT,CE,2718.0,2741,-23
-The ProBUs Strikes Back,PSB,DE,2684.0,2695,-11
-Puns Upon a Time,PUNS,DW,2676.3,2684,-8
-Ana Maniacs,ANA,BE1,2741.1,2790,-49
-Free Hong Kong,FCHK,E,2635.0,2635,0
-UuuuuuuuuuWuuuuuuuuuU,UWU,BW,2740.0,2794,-54
-TRSG Knights,TRKN,DW,2670.8,2684,-13
-Psistorm Gaming: Purifiers,PSI,DE,2670.0,2695,-25
-Durotan's Couch,DC,CE,2701.1,2741,-39
-Respect the Goose,RTG,CW,2701.0,2745,-44
-Nerf the Smurfs,NERF,DW,2666.4,2684,-18
-Heavy Slaps,SLAP,CE,2696.8,2741,-44
-ARTEMIS,ART,CW,2691.6,2745,-54
-Illidancing Queens,IQ,E,2618.9,2635,-16
-Council of Mages,MAGE,DE,2657.5,2695,-37
-Team Banshee,TB,DE,2656.2,2695,-39
-ReGen Divine,RGD,DW,2649.3,2684,-35
-Witch Rhythm,WR,CE,2681.6,2741,-59
-Knights that Stay Bronze,KTSB,DW,2649.0,2684,-35
-The Core Bouncers,CORE,E,2604.7,2635,-30
-Can't Connect Stuns,STUN,DW,2643.9,2684,-40
-Hots Potato,HP,DE,2643.5,2695,-51
-Team Maroon,MARO,CW,2675.3,2745,-70
-We're Scaling,SCAL,DW,2638.3,2684,-46
-One More Fight!,OMF,DE,2636.7,2695,-58
-Bull Moose Party,BULL,E,2596.1,2635,-39
-The Baddest Dudez,TBD,E,2594.9,2635,-40
-Xul Gin Distillery,XGD,CE,2666.1,2741,-74
-Resurgence of the Storm,ROTS,CW,2662.0,2745,-83
-Lightly Salted,SALT,DW,2628.9,2684,-55
-FF & the Pancakes,FFTP,E,2588.5,2635,-47
-Phoenix Rising Onyx,PRO,DE,2626.5,2695,-68
-Yavapai whatever the fuck,YAVA,DW,2616.5,2684,-67
-The Devil's Rejects,TDR,E,2571.4,2635,-64
-Phoenix Rising Amethyst,PRA,E,2562.9,2635,-72
-Cool Cats and Kittens,CCK,DW,2598.7,2684,-85
-p0s3idon,POS,E,2541.1,2635,-94
-Freedonia,FREE,E,2484.2,2635,-151
-Team Alexander,ALEX,S,3185.1,3185,0
-The Nine Avatara,9AV,DW,2647.9,2684,-36
-Archon,ARCH,H,2970.9,2971,0
-CTON,CTON,S,3185.1,3185,0
-Icecrown Citadel Knights,ICK,E,2579.4,2635,-56
+Team Name,ABBRV,Division,Estimated Initial Elo,Naive
+Xul Gin Distillery,XGD,CE,2728.353,2747.29125
+Durotan's Couch,DC,BNE,2812.37,2828.668167
+Frank's Furters,ff,CE,2744.567,2747.29125
+Can't Counterpick Stupid,CCS,CW,2807.173,2752.101083
+Arrogant Nephalem,AN,BW,2823.164,2811.158455
+gillyShark,GS,N,2920.618,2939.2574
+Boogans Forever,bf,AE,2943.716,2908.341727
+The Baddest Dudez,tbd,EE,2630.409,2579.970167
+House Of Chez,HOC,CE,2809.272,2747.29125
+2Calculated2Throw,2c2t,BNE,2827.566,2828.668167
+Nexus Cats,NC,BNE,2739.746,2828.668167
+ReGen Phoenix,rgp,AE,2910.824,2908.341727
+Flint Tropics,ft,EW,2625.051,2574.019143
+ProBUs,pbu,BNE,2870.28,2828.668167
+sOaK eVeRy LaNe,sel,BW,2857.806,2811.158455
+Sky5,sky5,AE,2907.27,2908.341727
+Clouded Minds,cm,DW,2766.996,2661.057167
+Randy Newman,rn,BW,2822.147,2811.158455
+Lurk Patrol,LP,AW,2839.316,2898.952714
+Minion Miners,MM,AW,2926.743,2898.952714
+FC Hong Kong,FHK,DE,2683.72,2699.23975
+ReGen Ghost,rgg,BNE,2796.825,2828.668167
+Roll1Esports,roll1,CW,2825.495,2752.101083
+COSMOS:Redshift,cosr,BW,2823.352,2811.158455
+FF & the Pancakes,ff&tp,EE,2585.776,2579.970167
+Blood Bath & Beyond,BB&B,CW,2815.022,2752.101083
+Team Happy Cloud,THC,N,2918.797,2939.2574
+Uncomfortably Numb,UN,BNE,2856.762,2828.668167
+Spooky Ghosts,SG,BW,2813.272,2811.158455
+Team Rainbow Strike Go!,rsg,CW,2823.2,2752.101083
+Emanon,emn,BSE,2880.03,2826.659667
+Phoenix Rising Onyx,pro,CE,2750.398,2747.29125
+Anti-Clown Association,aca,S,3110.25,3100.782375
+Phoenix Rising Diamond,prd,AE,2914.993,2908.341727
+Last Dance,LD,EE,2478.125,2579.970167
+Phoenix Rising Ruby,PRR,N,2933.538,2939.2574
+Better Than Bots,BTB,AW,2873.583,2898.952714
+ReGen,rg,S,3075.625,3100.782375
+Phoenix Rising Xanthite,prx,AE,2912.297,2908.341727
+Cael'Thas Can't Spell,ctcs,CE,2750.621,2747.29125
+death and delay,DAD,BSE,2858.306,2826.659667
+Bunker Fun Time,BFT,CE,2767.138,2747.29125
+Amateur Opponents,ao,BNE,2874.11,2828.668167
+Bronze6,brnz6,N,2986.68,2939.2574
+The ProBUs Strikes Back,tpsb,DE,2753.844,2699.23975
+Caffeinated Knights,CafK,N,2966.903,2939.2574
+Phoenix Rising Amethyst,PRA,EW,2486.375,2574.019143
+Artemis,ART,CW,2707.755,2752.101083
+Kryix Tempest,to,H,3051.134,2991.016429
+Heavy Impact,hi,S,3124.875,3100.782375
+Can't Connect Stuns,ccs2,CW,2688.38,2752.101083
+Tricky Gooses,TG,AE,2898.422,2908.341727
+Bad By Design,bbd,BSE,2803.879,2826.659667
+Cool Cats and Kittens,cocak,CW,2723.496,2752.101083
+Resurgence of the Storm,rts,BW,2838.343,2811.158455
+Heavy Slaps,SLAP,CE,2738.246,2747.29125
+Fancy Flightless Fowl,fff,H,2963.903,2991.016429
+ReGen Divine,rgd,CW,2795.781,2752.101083
+The Devil's Rejects,tdr,DE,2689.64,2699.23975
+Team Ripers,RIP,H,3033.634,2991.016429
+Deckard's Erudition,DE,BSE,2823.441,2826.659667
+TRSG Knights,TRSGK,DW,2750.415,2661.057167
+Beyond Gaming,beynd,BSE,2731.04,2826.659667
+Die for Catgirls,DfC,BNE,2844.78,2828.668167
+Match Ready,mr,AW,2878.726,2898.952714
+Phoenix Rising Citrine,PRC,BSE,2831.816,2826.659667
+Puns Upon a Time,puns,DW,2674.292,2661.057167
+The Nine Avatara,-ix-,EE,2638.426,2579.970167
+Protectors of Aiur,poa,CE,2708.157,2747.29125
+Baby Makers,BM,H,2956.94,2991.016429
+p0s3idon,p03,DE,2720.827,2699.23975
+Rise N' Grind,rng,DE,2732.478,2699.23975
+Juan Direction,ccc,S,3108.75,3100.782375
+Phoenix Rising Emerald,pre,BW,2827.316,2811.158455
+Team Banshee,tb,CW,2776.754,2752.101083
+BeefBois,Beefy,AE,2900.351,2908.341727
+Strange Team Comp,STC,BSE,2846.914,2826.659667
+Ana Maniacs,am,CE,2757.638,2747.29125
+Bull Moose Party,BMP,EW,2597.07,2574.019143
+Dark Allegiance,DA,AE,2950.136,2908.341727
+Running Wild,rw,AE,2928.038,2908.341727
+Phoenix Rising Topaz,prt,BSE,2851.458,2826.659667
+Icecrown Citadel Knights,icck,DE,2657.238,2699.23975
+Fade2Black,f2b,DW,2660.569,2661.057167
+The Core Bouncers,core,DW,2584.293,2661.057167
+Mnaval,MNVL,AW,2921.02,2898.952714
+Mosley and the Arconauts,MATA,EW,2588.847,2574.019143
+BFT One Punch Monk,OPM,BSE,2789.362,2826.659667
+VibeCheque,vc,DW,2670.738,2661.057167
+Macro Machines,mama,EE,2656.926,2579.970167
+Dead Game Players,DGP,AE,2821.147,2908.341727
+Icecrown Citadel Queens,ICCQ,EE,2624.078,2579.970167
+Boosted Bonobos,bb,AW,2923.216,2898.952714
+Car Crash Sounds,CRASH,EE,2500.937,2579.970167
+CM After Dark,cm ad,CW,2768.754,2752.101083
+DeepFriedMingBalls,Haute,EW,2638.651,2574.019143
+WildHeart Omega,who,H,3022.769,2991.016429
+Phoenix Rising Sapphire,PRS,EE,2521.231,2579.970167
+Chilly Mountain Academy,cma,S,3075.375,3100.782375
+Liquid metal,LM,EW,2570.749,2574.019143
+BG: 40 Seconds To Feed,BG40,BSE,2873.056,2826.659667
+Phoenix Rising Esports,PR1,H,3011.144,2991.016429
+Nature's Cure,NSC,AW,2930.065,2898.952714
+The Fools Gambit,tfg,S,3039.134,3100.782375
+Team Ionic,ion,DE,2637.274,2699.23975
+Waiting On Cherry,WoC,DW,2693.603,2661.057167
+Almost Legends Gold,alg,CE,2746.853,2747.29125
+Martyr of Moratorium,MOM,DE,2702.005,2699.23975
+Grubby's Fan Boys,gfb,BW,2722.183,2811.158455
+Icecrown Citadel Raiders,ICCR,EE,2616.399,2579.970167
+Brickhouse,brick,DE,2655.309,2699.23975
+I JUST ENJOY BREAD MAN,JEB,N,2949.815,2939.2574
+ReGen Rebel,rgrbl,EE,2661.64,2579.970167
+Can't Cleanse Salt,SALT,DE,2741.112,2699.23975
+Team TBD,ttbd,CE,2741.077,2747.29125
+Wait Till 10,wtt,DE,2717.898,2699.23975
+Team Gobby Legs,tgl,BNE,2842.61,2828.668167
+US Army Esports,USAE,CE,2725.175,2747.29125
+Vendetta,Vdta,N,2928.368,2939.2574
+Spooky Booky Bois,SBB,N,2915.797,2939.2574
+Souls in Slowmo,sis,EE,2506.731,2579.970167
+Maximum Thrust,MT,DW,2679.89,2661.057167
+Baby on Board,BoB,AE,2904.565,2908.341727
+Team Krap Yourself,tky,DW,2641.203,2661.057167
+Wood League Express,WLE,EW,2511.391,2574.019143
+Private Potato,pp,DW,2581.453,2661.057167
+Almost Legends Obsidian,A.L.O,CW,2751.942,2752.101083
+COSMOS:Blueshift,COSB,BW,2753.058,2811.158455
+Phoenix Rising Zircon,PRZ,N,2911.618,2939.2574
+La Croix Bois,lcb,BW,2798.477,2811.158455
+Currently Chasing Samuro,CCS8,BSE,2779.852,2826.659667
+210 Blechman Street,2560,CW,2541.461,2752.101083
+Los Popochas Team,LPT,H,2897.591,2991.016429
+Tar Pit Tipplers,tpt,EE,2538.964,2579.970167
+Lowered Expectations,LE,DW,2645.828,2661.057167
+Qhira's Hit List,qhl,BNE,2801.067,2828.668167
+Hold My Cho,HMC,BNE,2781.531,2828.668167
+Hello Kitty Action Squad,HKAS,DE,2699.532,2699.23975
+HippityHoppityBros,HHH,N,2960.44,2939.2574
+Metapicks,mp,DW,2583.406,2661.057167
+Cat Daddies,CatDs,BW,2843.625,2811.158455
+WildHeart,wh_,S,3120.5,3100.782375
+Yellow Owls,yo,BNE,2896.371,2828.668167
+Trait Value,tv,BSE,2850.762,2826.659667
+TFzugrugs,zug,S,3151.75,3100.782375

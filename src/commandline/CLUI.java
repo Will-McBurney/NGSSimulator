@@ -85,8 +85,8 @@ public class CLUI {
 				}
 				
 			} else if (args[0].equalsIgnoreCase("all")) {
-				String[] divisions = {"H", "AE", "AW", "BE1", "BE2", "BW", "CE", "CW", "DE", "DW", "E"};
-				boolean[] naiveValues = {true};
+				String[] divisions = {"H", "N", "AE", "AW", "BNE", "BSE", "BW", "CE", "CW", "DE", "DW", "EE", "EW"};
+				boolean[] naiveValues = {true, false};
 				for (String div : divisions) {
 					for (boolean naive : naiveValues) {
 						con.setFifty(false);
