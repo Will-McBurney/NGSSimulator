@@ -1,0 +1,3 @@
+python schedule_getter.py
+rm data\schedule\Schedules.xlsx
+mv Schedules.xlsx data\schedule\

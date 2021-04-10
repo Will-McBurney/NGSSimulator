@@ -12,9 +12,9 @@ def get_match_timestamp(match):
 
 
 excel_filename = "Schedules.xlsx"
-divisions = {'storm':'S', 'heroic':'H', 'nexus':'N', 'a-east':'AE', 'a-west':'AW',
-             'b-northeast':'BNE', 'b-southeast':'BSE', 'b-west':'BW', 'c-east':'CE',
-             'c-west':'CW', 'd-east':'DE', 'd-west':'DW', 'e-east':'EE', 'e-west':'EW'}
+divisions = {'storm': 'S', 'heroic': 'H', 'nexus': 'N', 'a-east': 'AE', 'a-west': 'AW',
+             'b-northeast': 'BNE', 'b-southeast': 'BSE', 'b-west': 'BW', 'c-east': 'CE',
+             'c-west': 'CW', 'd-east': 'DE', 'd-west': 'DW', 'e-east': 'EE', 'e-west': 'EW'}
 
 workbook = Workbook()
 
@@ -42,9 +42,14 @@ for div in divisions.keys():
         home_score = 0
         away_score = 0
         if "reported" in match.keys() and match["reported"]:
-            reported = True
-            home_score = match["home"]["score"]
-            away_score = match["away"]["score"]
+            try:
+                reported = True
+                home_score = match["home"]["score"]
+                away_score = match["away"]["score"]
+            except KeyError:
+                print(match["home"]["ticker"], match["away"]["ticker"])
+                home_score = 1
+                away_score = 2
         home_ticker = ""
         away_ticker = ""
         try:
@@ -73,7 +78,7 @@ for div in divisions.keys():
             worksheet.cell(row_number, 5, forfeit)
             worksheet.cell(row_number, 6, match_date)
         row_number = row_number + 1
-del workbook["Sheet"]
+workbook.remove_sheet(workbook.get_sheet_by_name("Sheet"))
 
 workbook.save(excel_filename)
 workbook.close()

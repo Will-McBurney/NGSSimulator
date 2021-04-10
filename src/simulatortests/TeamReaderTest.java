@@ -11,7 +11,7 @@ import simulator.teamreader.NaiveNGSTeamReader;
 public class TeamReaderTest {
 	public static void main(String[] args) {
 		NGSTeamReader reader = new EstimatedNGSTeamReader("teams.csv");
-		List<NGSTeam> teams = reader.getTeamsForDivision("H");
+		List<NGSTeam> teams = reader.getTeamsForDivision("BSE");
 		for (Team t : teams) {
 			System.out.println(t.toStringDetailed());
 		}

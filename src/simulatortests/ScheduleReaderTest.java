@@ -12,9 +12,9 @@ import simulator.teamreader.NGSTeamReader;
 public class ScheduleReaderTest {
 	public static void main(String[] args) {
 		NGSTeamReader tr = new EstimatedNGSTeamReader("teams.csv");
-		List<NGSTeam> teams = tr.getTeamsForDivision("E");
+		List<NGSTeam> teams = tr.getTeamsForDivision("BSE");
 		NGSScheduleReader reader = new NGSExcelScheduleReader();
-		System.out.println(reader.getDivisionSchedule(teams, "E", false));
+		System.out.println(reader.getDivisionSchedule(teams, "BSE", false));
 		
 		
 	}

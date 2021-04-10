@@ -82,13 +82,20 @@ public class NGSMatch implements Match{
 			if (fiftyFifty) {
 				r = 0.5;
 			}
-			/** this section is for checking playoff locking **/
-			String stooge = "PRA";
-			if (home.getAbbreviation().equals(stooge)) {
-				r = 0.0;
-			} else if (away.getAbbreviation().equals(stooge)) {
-				r = 1.0;
-			}
+//			/** this section is for checking playoff locking **/
+//			String stooge = "DE";
+//			if (home.getAbbreviation().equals(stooge)) {
+//				r = 0.0;
+//			} else if (away.getAbbreviation().equals(stooge)) {
+//				r = 1.0;
+//			}
+//			
+//			stooge = "OPM";
+//			if (home.getAbbreviation().equals(stooge)) {
+//				r = 1.0;
+//			} else if (away.getAbbreviation().equals(stooge)) {
+//				r = 0.0;
+//			}
 			
 			
 			//Best of 3 simulation

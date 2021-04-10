@@ -24,5 +24,6 @@ public class TeamTests {
 		
 		System.out.println(t.toStringDetailed());
 		System.out.println(g.toStringDetailed());
+		System.out.println(f.toStringDetailed());
 	}
 }

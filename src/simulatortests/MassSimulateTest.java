@@ -5,10 +5,10 @@ import simulator.NGSSimulationAccumulator;
 import simulator.NGSTeamSimulationResult;
 
 public class MassSimulateTest {
-	public static final int SIMULATION_COUNT = 1000;
+	public static final int SIMULATION_COUNT = 10000;
 	
 	public static void main(String[] args) {
-		String[] divs = {"S"};
+		String[] divs = {"BSE"};
 		for (int d = 0; d < divs.length; d++) {
 			System.out.println("Division : " + divs[d] + " -- Naive");
 			NGSDivision ngsd = new NGSDivision("teams.csv", divs[d], true, true);

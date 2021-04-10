@@ -55,8 +55,8 @@ public class NGSExcelScheduleReader extends NGSScheduleReader {
 					if (r.getCell(4) != null && r.getCell(4).getNumericCellValue() == 1.0) {
 						isForfeit = true;
 					}
-					home.recordMatchResult(away, (int) r.getCell(2).getNumericCellValue(),
-							(int) r.getCell(3).getNumericCellValue(), isForfeit);
+					//home.recordMatchResult(away, (int) r.getCell(2).getNumericCellValue(),
+					//		(int) r.getCell(3).getNumericCellValue(), isForfeit);
 					matches.add(new NGSMatch(home, away, (int) r.getCell(2).getNumericCellValue(),
 							(int) r.getCell(3).getNumericCellValue(), isForfeit));
 					}				

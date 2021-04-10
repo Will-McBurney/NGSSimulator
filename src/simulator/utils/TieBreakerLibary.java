@@ -26,6 +26,21 @@ public class TieBreakerLibary {
 		}
 		
 	}
+	
+	public static class MapTieBreakerScore implements Comparable<MapTieBreakerScore> {
+		NGSTeam team;
+		int score;
+		
+		public MapTieBreakerScore(NGSTeam team) {
+			this.team = team;
+		}
+		
+		@Override
+		public int compareTo(MapTieBreakerScore o) {
+			return o.score - this.score; //descending
+		}
+		
+	}
     /**
      * Breaks tiebreaker of tied teams. This does NOT take into account KDA, so if a tie is unresolvable, a team is chosen randomly.
      * @param tied - list of tied teams.
@@ -76,9 +91,41 @@ public class TieBreakerLibary {
 						break;
 					}
 				}
-				if (allSame) { //unresolvable, pick one at random
-					Collections.shuffle(tiebreaker);
-					return tiebreaker.get(0).team;
+				if (allSame) { 
+					List<MapTieBreakerScore> mapScoreBreaker = new ArrayList<MapTieBreakerScore>();
+					for (HeadToHeadTieBreakerScore t : tiebreaker) {
+						MapTieBreakerScore toAdd = new MapTieBreakerScore(t.team);
+						toAdd.score = t.team.getMapWins() - t.team.getMapLosses();
+						mapScoreBreaker.add(toAdd);
+					}
+					Collections.sort(mapScoreBreaker);
+					if (mapScoreBreaker.get(0).score > mapScoreBreaker.get(1).score) { //if top score is better than all other scores
+						return mapScoreBreaker.get(0).team;//return top scoring team
+					}
+					else {
+						int targetMapScore = mapScoreBreaker.get(0).score;
+						boolean mapScoreAllSame = true;
+						for (MapTieBreakerScore team : mapScoreBreaker) {
+							if (team.score != targetMapScore ) {
+								mapScoreAllSame = false;
+								break;
+							}
+						}
+						if (mapScoreAllSame) {
+							Collections.shuffle(mapScoreBreaker);
+							return mapScoreBreaker.get(0).team;
+						}
+						else {
+							
+							ArrayList<NGSTeam> furtherTied = new ArrayList<NGSTeam>();
+							for (MapTieBreakerScore team : mapScoreBreaker) {
+								if (team.score == targetMapScore) {
+									furtherTied.add(team.team);
+								}
+							}
+							return ngsBreakTie(furtherTied);
+						}
+					}
 				} else {
 					ArrayList<NGSTeam> furtherTied = new ArrayList<NGSTeam>();
 					for (HeadToHeadTieBreakerScore t : tiebreaker) {

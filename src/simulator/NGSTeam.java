@@ -122,6 +122,7 @@ public class NGSTeam implements Team {
 				return i;
 			}
 		}
+		System.out.println(this.toStringDetailed() + " \n---------\n" + o.toStringDetailed());
 		throw new RuntimeException("ERROR: No result between " + this.abbrv + " and " + o.abbrv + " found!");
 	}
 
@@ -275,6 +276,8 @@ public class NGSTeam implements Team {
 			sb.append(t+",");
 		}
 		sb.append("\n\t\tScore: " + getScore());
+		sb.append("\n\t\tMap W: " + this.getMapWins());
+		sb.append("\n\t\tMap L: " + this.getMapLosses());
 		
 		return sb.toString();
 	}
