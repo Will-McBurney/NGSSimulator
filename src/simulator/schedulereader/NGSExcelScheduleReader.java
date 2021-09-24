@@ -47,7 +47,7 @@ public class NGSExcelScheduleReader extends NGSScheduleReader {
 				//System.out.println(r.getLastCellNum());
 				NGSTeam home = teamMap.get(r.getCell(0).getStringCellValue());
 				NGSTeam away = teamMap.get(r.getCell(1).getStringCellValue());
-				//System.out.println(home + " : " + away);
+				//System.out.println(home + " :: " + away);
 				if (r.getCell(2) == null) {
 					matches.add(new NGSMatch(home, away, fiftyFifty));
 				} else {

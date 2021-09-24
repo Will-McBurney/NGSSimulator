@@ -34,11 +34,13 @@ public class NGSDivision implements Division{
 		name = divisionName;
 		simulated = false;
 		NGSTeamReaderFactory trf = new NGSTeamReaderFactory();
+		
 		NGSTeamReader tr = trf.getNGSTeamReader(teamFilename, isNaive);
 		teams = tr.getTeamsForDivision(divisionName);
 		NGSScheduleReader sr = new NGSExcelScheduleReader();
+		//System.out.println(teams);
 		schedule = sr.getDivisionSchedule(teams, divisionName, fiftyFifty);
-		
+		//System.out.println(schedule);
 	}
 	
 	/**

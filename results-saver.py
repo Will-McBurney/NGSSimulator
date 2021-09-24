@@ -5,7 +5,7 @@ from shutil import copyfile
 now = datetime.now()
 
 # dd/mm/YY H:M:S
-dt_string = now.strftime("%d-%m-%Y_%H-%M-%S")
+dt_string = now.strftime("%Y-%m-%d_%H-%M-%S")
 new_filename = dt_string + "_results.txt"
 
 copyfile("simulationResults.txt", "pastResults/" + new_filename)

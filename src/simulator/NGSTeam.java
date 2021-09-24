@@ -8,7 +8,7 @@ import simulator.utils.EloLibrary;
 public class NGSTeam implements Team {
 	private String name;
 	private String abbrv;
-	private ArrayList<ArrayList<NGSTeam>> results; //NOTE: This assumes each team plays each other team in exactly 1 match
+	private ArrayList<ArrayList<NGSTeam>> results; //NOTE: This assumes each team plays each other team in at least 1 other match
 	private double elo;
 	private int forfeits;
 

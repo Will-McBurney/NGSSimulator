@@ -20,7 +20,7 @@ public class NaiveNGSTeamReader extends NGSTeamReader {
 	 */
 	@Override
 	protected NGSTeam getTeamFromLine(String line) {
-		String[] lineSplit = line.split(",");
+		String[] lineSplit = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
 		return new NGSTeam(lineSplit[0], lineSplit[1], Double.parseDouble(lineSplit[4]));
 	}
 

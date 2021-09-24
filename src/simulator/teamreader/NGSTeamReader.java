@@ -97,7 +97,7 @@ public abstract class NGSTeamReader {
 	 * @return
 	 */
 	private String getDivisionNameFromLine(String line) {
-		return line.split(",")[2];
+		return line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1)[2];
 	}
 	
 	/**

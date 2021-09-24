@@ -63,7 +63,7 @@ public class NGSController {
 	
 	public HashMap<NGSTeam, Double> getAllEloScores() {
 		HashMap<NGSTeam, Double> eloMap = new HashMap<NGSTeam, Double>();
-		String[] divisions = {"H", "N", "AE", "AW", "BNE", "BSE", "BW", "CE", "CW", "DE", "DW", "EE", "EW"};
+		String[] divisions = {"H", "N", "A", "BNE", "BSE", "BW", "CE", "CW", "DNE", "DSE", "DW", "EE", "EW"};
 		NGSTeamReader tr = isNaive ?  new NaiveNGSTeamReader(teamFileName) : new EstimatedNGSTeamReader(teamFileName);
 		for (String division : divisions) {
 			NGSDivision ngsd = new NGSDivision(teamFileName, division, isNaive, fiftyFifty);
