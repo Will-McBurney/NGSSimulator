@@ -1,5 +1,4 @@
 echo "Starting"
-cd C:\Users\Will\Documents\GitHub\NGSSimulator\NGSSimulator
 echo "Getting schedules from NGS website"
 python data\schedules\schedule_getter.py
 echo "Replacing old schedule"
